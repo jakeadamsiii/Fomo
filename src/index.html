@@ -12,22 +12,18 @@
   <header>
   <nav class="container">
       <ul>
-        <li class="logo"><a ui-sref="postsIndex">Instagram</a></li>
+        <li class="logo"><a ui-sref="postsIndex"><img src="logo.png" alt="logo"></a></li>
         <li class="burger" ng-click="main.navIsOpen = !main.navIsOpen">&#9776;</li>
         <div class="dropdown" ng-class="{ 'open': main.navIsOpen }">
-          <li><a ui-sref="postsIndex" ui-sref-active="active">All posts</a></li>
-          <li ng-if="main.isAuthenticated()"><a ui-sref="postsNew" ui-sref-active="active">Add a post</a></li>
-          <li ng-if="!main.isAuthenticated()"><a ui-sref="login" ui-sref-active="active">Login</a></li>
-          <li ng-if="!main.isAuthenticated()"><a ui-sref="register" ui-sref-active="active">Register</a></li>
-          <li ng-click="main.logout()" ng-if="main.isAuthenticated()"><a href="#">Logout</a></li>
+          <li><a ui-sref="postsIndex" ui-sref-active="active">Home</a></li>
+          <li><a ui-sref="postsNew" ui-sref-active="active">Store</a></li>
+          <li><a ui-sref="login" ui-sref-active="active">Events</a></li>
+          <li><a ui-sref="register" ui-sref-active="active">Artists</a></li>
         </div>
       </ul>
     </nav>
   </header>
   <div class="container">
-    <div class="message" ng-if="main.message">
-      <p>{{ main.message }}</p>
-    </div>
     <main ui-view></main>
   </div>
 </body>
