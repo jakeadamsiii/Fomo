@@ -2,7 +2,8 @@
 <html ng-app="instagramApp">
 <head>
   <base href="/">
-  <title>Instagram Clone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>FOMO</title>
   <!-- inject:js -->
   <!-- endinject -->
   <!-- inject:css -->
@@ -15,16 +16,24 @@
         <li class="logo"><a ui-sref="postsIndex"><img src="logo.png" alt="logo"></a></li>
         <li class="burger" ng-click="main.navIsOpen = !main.navIsOpen">&#9776;</li>
         <div class="dropdown" ng-class="{ 'open': main.navIsOpen }">
-          <li><a ui-sref="postsIndex" ui-sref-active="active">Home</a></li>
-          <li><a ui-sref="postsNew" ui-sref-active="active">Store</a></li>
+          <li><a href="http://fomorecords.bigcartel.com/" target="_blank">Store</a></li>
           <li><a ui-sref="login" ui-sref-active="active">Events</a></li>
           <li><a ui-sref="register" ui-sref-active="active">Artists</a></li>
         </div>
       </ul>
     </nav>
   </header>
-  <div class="container">
     <main ui-view></main>
-  </div>
+
+
+  <div class="footer">
+  <!-- <ul id="socialBtns">
+    <li><a href="#" target="_blank"><img class="mediabtn" src="http://www.freeiconspng.com/uploads/images-facebook-f-logo-png-transparent-background-page-2-29.png"></a></li>
+    <li><a href="#" target="_blank"><img class="mediabtn" src="https://img.clipartfest.com/b8c432267a7ac6fb3f67c67da889ae26_-png-transparent-background-instagram-clipart-png-transparent-background_2048-2048.png"></a></li>
+    <li><a href="#" target="_blank"><img class="mediabtn" src="https://www.girldevelopit.com/assets/github-fork-476365c39e16ea2d6172e4c1e8cf6e7c.png"></a></li>
+    <li><a href="#" target="_blank"><img class="mediabtn" src="http://3daystartup.org/wp-content/uploads/2011/07/twitter-512.png"></a></li>
+  </ul> -->
+  <p id="footerText">&copy; 2017 Fear of missing out records</p>
+</div>
 </body>
 </html>

@@ -50,7 +50,19 @@ strong {
   font-weight: 600;
 }
 
+.logo{
+    height: 95px;
+    width: 150px;
+    float: left;
+    margin: 0;
+}
+
+nav{
+    z-index: 10;
+}
+
 header {
+  z-index: 10;
   background: $fomoblue;
   height: 100px;
   margin-bottom: 20px;
@@ -58,15 +70,11 @@ header {
   ul {
     li {
       display: inline-block;
-      margin-right: 25px;
+      margin-top: 40px;
+      margin-left: 30px;
       text-transform: uppercase;
       letter-spacing: 2px;
       font-size: 22px;
-      img{
-        height: 95px;
-        width: 150px;
-        float: left;
-      }
       &.logo {
         font-weight: 600;
         font-size: 16px;
@@ -74,6 +82,8 @@ header {
       &.burger {
         display: none;
         cursor: pointer;
+        margin-top: 20px;
+        font-size: 50px;
       }
       a {
         color:white;
@@ -209,18 +219,131 @@ form {
   margin-bottom: 20px;
 }
 
-// Form validation
-.error {
-  text-transform: uppercase;
-  padding: 6px 8px;
-  font-size: 12px;
-  background-color: #ccc;
-  font-weight: 300;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
+//====Landing page styles =======
+
+.parallax{
+  margin-top: -22px;
+  opacity: 0.65;
+  height: 600px;
+  width: 100%;
+  background-image: url("../index3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
-@media (max-width: 767px) {
+.content{
+  height:50%;
+  background-color:white;
+  text-align: center;
+  p{
+    padding: 15px;
+    font-size:20px;
+    font-family: 'Dosis', sans-serif;
+  }
+  h2{
+    font-family: 'Open Sans Condensed', sans-serif;
+  }
+}
+
+.parallax2{
+  opacity: 0.65;
+  height: 700px;
+  width: 100%;
+  background-image: url("../index2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.content2{
+  color:white;
+  height:55%;
+  margin-top: -20px;
+  background-color:rgba(0,0,0,0.8);
+  text-align: left;
+  p{
+    padding: 15px;
+    font-size:20px;
+    font-family: 'Dosis', sans-serif;
+  }
+  h2{
+    padding-top: 20px;
+    padding-left: 30px;
+    font-family: 'Open Sans Condensed', sans-serif;
+  }
+}
+
+.parallax3{
+  opacity: 0.65;
+  height: 700px;
+  width: 100%;
+  background-image: url("../index.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.content3{
+  color:white;
+  height:40%;
+  margin-top: -20px;
+  background-color:rgba(0,0,0,1);
+  text-align: center;
+  p{
+    padding: 15px;
+    font-size:20px;
+    font-family: 'Dosis', sans-serif;
+  }
+}
+
+
+
+//footer
+div.footer{
+  border-top: 1px solid black;
+  z-index:5;
+  background-color: #FAFAF9;
+  height:50px;
+  text-align: center;
+  color: black;
+  // position: absolute;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+  p{
+    float:none;
+    padding-top: 8px;
+    padding-right: 30px;
+    display:block;
+    opacity: 0.7;
+    height: 8px;
+    font-size: 13px;
+  }
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      display: inline-block;
+      float: left;
+      margin-left: 20px;
+      line-height: 40px;
+      a {
+        img {
+          max-height: 30px;
+          width: 30px;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 767px){
   .post {
     img {
       margin-bottom: 20px;
@@ -255,6 +378,9 @@ form {
       }
       li {
         display: block;
+        a{
+          color:black;
+        }
       }
     }
   }
