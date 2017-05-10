@@ -12,15 +12,6 @@ router.route('/posts/:id')
   .get(posts.show)
   .delete(secureRoute, posts.delete);
 
-router.route('/posts/:id/comments')
-  .post(secureRoute, posts.addComment);
-
-router.route('/posts/:id/comments/:commentId')
-  .delete(secureRoute, posts.deleteComment);
-
-router.route('/register')
-  .post(auth.register);
-
 router.route('/login')
   .post(auth.login);
 
