@@ -9,6 +9,14 @@ function MainCtrl($rootScope, $state, $auth) {
 
   vm.isAuthenticated = $auth.isAuthenticated;
 
+  vm.logout = logout;
+
+function logout() {
+  $auth.logout(); //remove the token
+  location.reload();
+  $state.go('login');
+}
+
   $rootScope.$on('error', (e, err) => {
     vm.stateHasChanged = false;
     vm.message = err.data.message;
