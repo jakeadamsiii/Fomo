@@ -34,4 +34,4 @@ artistSchema.pre('remove', function deleteImage(next){
   next();
 });
 
-module.exports = mongoose.model('Item', artistSchema);
+module.exports = mongoose.model('Artist', artistSchema);

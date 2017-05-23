@@ -22,6 +22,21 @@ function Router($stateProvider, $urlRouterProvider, $locationProvider) {
       templateUrl: 'js/views/posts/show.html',
       controller: 'PostsShowCtrl as postsShow'
     })
+    .state('artistsIndex', {
+      url: '/artists',
+      templateUrl: 'js/views/artists/index.html',
+      controller: 'ArtistsIndexCtrl as artistsIndex'
+    })
+    .state('artistsNew', {
+      url: '/artists/new',
+      templateUrl: 'js/views/artists/new.html',
+      controller: 'ArtistsNewCtrl as artistsNew'
+    })
+    .state('artistsShow', {
+      url: '/artists/:id',
+      templateUrl: 'js/views/artists/show.html',
+      controller: 'ArtistsShowCtrl as artistsShow'
+    })
     .state('login', {
       url: '/login',
       templateUrl: 'js/views/auth/login.html',

@@ -17,7 +17,7 @@
         <li class="burger" ng-click="main.navIsOpen = !main.navIsOpen">&#9776;</li>
         <div class="dropdown" ng-class="{ 'open': main.navIsOpen }">
           <li><a href="http://fomorecords.bigcartel.com/" target="_blank">Store</a></li>
-          <li><a ui-sref="#" ui-sref-active="active">Artists</a></li>
+          <li><a ui-sref="artistsIndex" ui-sref-active="active">Artists</a></li>
           <li><a ng-if="main.isAuthenticated()" ui-sref="#">Add artist</a></li>
           <li><a ui-sref="#" ui-sref-active="active">News</a></li>
           <li><a ng-if="main.isAuthenticated()" ui-sref="#">Add news</a></li>
