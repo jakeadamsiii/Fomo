@@ -30,12 +30,37 @@ function Router($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('artistsNew', {
       url: '/artists/new',
       templateUrl: 'js/views/artists/new.html',
-      controller: 'ArtistsNewCtrl as artistsNew'
+      controller: 'ArtistsNewCtrl as new'
     })
     .state('artistsShow', {
       url: '/artists/:id',
       templateUrl: 'js/views/artists/show.html',
       controller: 'ArtistsShowCtrl as artistsShow'
+    })
+    .state('artistsEdit', {
+      url: '/show/:id/edit',
+      templateUrl: 'js/views/artists/edit.html',
+      controller: 'ArtistsEditCtrl as edit'
+    })
+    .state('newsIndex', {
+      url: '/news',
+      templateUrl: 'js/views/news/index.html',
+      controller: 'NewsIndexCtrl as newsIndex'
+    })
+    .state('newsNew', {
+      url: '/news/new',
+      templateUrl: 'js/views/news/new.html',
+      controller: 'NewsNewCtrl as new'
+    })
+    .state('newsShow', {
+      url: '/news/:id',
+      templateUrl: 'js/views/news/show.html',
+      controller: 'NewsShowCtrl as newsShow'
+    })
+    .state('newsEdit', {
+      url: '/show/:id/edit',
+      templateUrl: 'js/views/news/edit.html',
+      controller: 'NewsEditCtrl as edit'
     })
     .state('login', {
       url: '/login',

@@ -18,9 +18,9 @@
         <div class="dropdown" ng-class="{ 'open': main.navIsOpen }">
           <li><a href="http://fomorecords.bigcartel.com/" target="_blank">Store</a></li>
           <li><a ui-sref="artistsIndex" ui-sref-active="active">Artists</a></li>
-          <li><a ng-if="main.isAuthenticated()" ui-sref="#">Add artist</a></li>
-          <li><a ui-sref="#" ui-sref-active="active">News</a></li>
-          <li><a ng-if="main.isAuthenticated()" ui-sref="#">Add news</a></li>
+          <li><a ng-if="main.isAuthenticated()" ui-sref="artistsNew">Add artist</a></li>
+          <li><a ui-sref="newsIndex" ui-sref-active="active">News</a></li>
+          <li><a ng-if="main.isAuthenticated()" ui-sref="newsNew">Add news</a></li>
           <li><a ui-sref="#" ui-sref-active="active">Releases</a></li>
           <li><a ng-if="main.isAuthenticated()" ui-sref="#">Add releases</a></li>
           <li><a ng-if="main.isAuthenticated()" ng-click="main.logout()">Logout</a></li>

@@ -1,0 +1,15 @@
+<div class="container newsShow">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1>{{newsShow.news.title}}</h1>
+      <img ng-src="{{newsShow.news.image}}">
+      <p>{{newsShow.news.article}}</p>
+    </div>
+
+    <div class="userButtons">
+      <a ng-if="main.isAuthenticated()" ui-sref="newsEdit({ id: newsShow.news.id})">Edit</a>
+      <a ng-if="main.isAuthenticated()" ng-click="newsShow.delete()">Delete</a>
+    </div>
+
+  </div>
+</div>

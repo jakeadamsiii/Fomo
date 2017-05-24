@@ -18,12 +18,10 @@ function ArtistsNewCtrl(Artist, $state) {
   vm.artist = {};
 
   function artistsCreate() {
-    if(vm.newForm.$valid) {
       Artist
         .save(vm.artist)
         .$promise
         .then(() => $state.go('artistsIndex'));
-    }
   }
 
   vm.create = artistsCreate;

@@ -6,5 +6,10 @@
       <p>{{artistsShow.artist.description}}</p>
     </div>
 
+    <div class="userButtons">
+      <a ng-if="main.isAuthenticated()" ui-sref="artistsEdit({ id: artistsShow.artist.id})">Edit</a>
+      <a ng-if="main.isAuthenticated()" ng-click="artistsShow.delete()">Delete</a>
+    </div>
+
   </div>
 </div>

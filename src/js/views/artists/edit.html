@@ -1,0 +1,23 @@
+<div class="container">
+
+<div class="row form">
+
+<h2>Edit</h2>
+<form name="edit.artistForm" ng-submit="edit.update()" >
+  <div class="form-group">
+    <label for="name">NAME</label>
+    <input type="text" name="name" id="name" ng-model="edit.artist.name" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="image">IMAGE</label>
+    <input type="text" name="image" id="image" ng-model="edit.artist.image" class="form-control">
+  </div>
+  <div class="form-group">
+    <p>DESCRIPTION</p>
+    <textarea name="description" rows="8" cols="80" ng-model="edit.artist.description"></textarea>
+  </div>
+  <button class="btn btn-primary">UPDATE</button>
+</form>
+</div>
+
+</div>

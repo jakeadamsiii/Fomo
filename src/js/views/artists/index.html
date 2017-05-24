@@ -3,11 +3,11 @@
 
     <div class="col-lg-6" ng-repeat="artists in artistsIndex.all">
         <a ui-sref="artistsShow({ id: artists.id })" >
-            <p>{{artists.name}}</p>
+          <p>{{artists.name}}</p>
           <img ng-src="{{ artists.image }}">
         </a>
         <p>{{artists.description}}</p>
     </div>
-    
+
   </div>
 </div>

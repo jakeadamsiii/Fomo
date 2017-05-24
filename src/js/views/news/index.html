@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-lg-6" ng-repeat="news in newsIndex.all">
+        <a ui-sref="newsShow({ id: news.id })" >
+            <p>{{news.title}}</p>
+          <img ng-src="{{ news.image }}">
+        </a>
+        <p>{{news.article}}</p>
+    </div>
+
+  </div>
+</div>
