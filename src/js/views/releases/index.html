@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-lg-6" ng-repeat="releases in releasesIndex.all">
+        <a ui-sref="releasesShow({ id: releases.id })" >
+          <p>{{releases.band}}</p>
+          <p>{{releases.album}}</p>
+          <img ng-src="{{ releases.image }}">
+        </a>
+        <p>{{releases.description}}</p>
+    </div>
+
+  </div>
+</div>

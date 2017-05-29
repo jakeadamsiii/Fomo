@@ -62,6 +62,26 @@ function Router($stateProvider, $urlRouterProvider, $locationProvider) {
       templateUrl: 'js/views/news/edit.html',
       controller: 'NewsEditCtrl as edit'
     })
+    .state('releasesIndex', {
+      url: '/releases',
+      templateUrl: 'js/views/releases/index.html',
+      controller: 'ReleasesIndexCtrl as releasesIndex'
+    })
+    .state('releasesNew', {
+      url: '/releases/new',
+      templateUrl: 'js/views/releases/new.html',
+      controller: 'ReleasesNewCtrl as new'
+    })
+    .state('releasesShow', {
+      url: '/releases/:id',
+      templateUrl: 'js/views/releases/show.html',
+      controller: 'ReleasesShowCtrl as releasesShow'
+    })
+    .state('releasesEdit', {
+      url: '/show/:id/edit',
+      templateUrl: 'js/views/releases/edit.html',
+      controller: 'ReleasesEditCtrl as edit'
+    })
     .state('login', {
       url: '/login',
       templateUrl: 'js/views/auth/login.html',

@@ -1,0 +1,16 @@
+<div class="container releasesShow">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1>{{releasesShow.releases.band}}</h1>
+      <h2>{{releasesShow.releases.album}}</h2>
+      <img ng-src="{{releasesShow.releases.image}}">
+      <p>{{releasesShow.releases.description}}</p>
+    </div>
+
+    <div class="userButtons">
+      <a ng-if="main.isAuthenticated()" ui-sref="releasesEdit({ id: releasesShow.releases.id})">Edit</a>
+      <a ng-if="main.isAuthenticated()" ng-click="releasesShow.delete()">Delete</a>
+    </div>
+
+  </div>
+</div>

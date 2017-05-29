@@ -1,0 +1,27 @@
+<div class="container">
+
+<div class="row form">
+
+<h2>Edit</h2>
+<form name="new.releasesForm" ng-submit="new.create()" >
+  <div class="form-group">
+    <label for="name">NAME</label>
+    <input type="text" name="name" id="name" ng-model="new.releases.band" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="name">ALBUM</label>
+    <input type="text" name="album" id="album" ng-model="new.releases.album" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="image">IMAGE</label>
+    <input type="text" name="image" id="image" ng-model="new.releases.image" class="form-control">
+  </div>
+  <div class="form-group">
+    <p>DESCRIPTION</p>
+    <textarea name="description" rows="8" cols="80" ng-model="new.releases.description"></textarea>
+  </div>
+  <button class="btn btn-primary">Create</button>
+</form>
+</div>
+
+</div>

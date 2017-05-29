@@ -2,6 +2,7 @@ const router = require('express').Router();
 const posts = require('../controllers/posts');
 const auth = require('../controllers/auth');
 const artistController = require('../controllers/artist');
+const releasesController = require('../controllers/releases');
 const newsController = require('../controllers/news');
 const imageUpload = require('../lib/imageUpload');
 const secureRoute = require('../lib/secureRoute');
@@ -31,6 +32,15 @@ router.route('/news/:id')
   .get(newsController.show)
   .put(imageUpload, newsController.update)
   .delete(secureRoute,newsController.delete);
+
+router.route('/releases')
+  .get(releasesController.index)
+  .post(secureRoute, imageUpload, releasesController.create);
+
+router.route('/releases/:id')
+  .get(releasesController.show)
+  .put(imageUpload, releasesController.update)
+  .delete(secureRoute,releasesController.delete);
 
 router.route('/login')
   .post(auth.login);

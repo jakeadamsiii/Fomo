@@ -1,30 +1,40 @@
-<!-- <div class="row posts">
-  <div ng-repeat="post in postsIndex.all" class="col-md-4">
-    <div class="posts__single">
-      <div class="posts__single-image" style="background-image:url('{{ post.imageSRC }}')" ui-sref="postsShow({ id: post.id })"></div>
-      <p><strong>{{ post.caption }}</strong></p>
-    </div>
-  </div>
-</div> -->
 
 <div class="parallax"></div>
 
-<div class="content">
+<div class="content container">
   <h2>FOMO</h2>
 <p>Parallax scrolling is a web site trend where the background content is moved at a different speed than the foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc nisl dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio. Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante augue etiam maecenas, porta porttitor placerat leo.
 </p>
+
+<div class ="row" ng-controller="ArtistsIndexCtrl as artistsIndex">
+  <a ui-sref="artistsIndex"><h1>Artists</h1></a>
+  <div class="col-lg-5 col-md-5" ng-repeat="artists in artistsIndex.all">
+      <a ui-sref="artistsShow({ id: artists.id })" >
+        <p>{{artists.name}}</p>
+        <img ng-src="{{ artists.image }}">
+      </a>
+  </div>
 </div>
 
-<!-- <div class="parallax2"></div>
-
-<div class="content2">
-  <h2>Get involved</h2>
-<p>Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc nisl dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio. Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante augue etiam maecenas, porta porttitor placerat leo.
-</p>
+<div class ="row" ng-controller="NewsIndexCtrl as newsIndex">
+  <a ui-sref="newsIndex"><h1>News</h1></a>
+  <div class="col-lg-2 col-md-3" ng-repeat="news in newsIndex.all">
+    <a ui-sref="newsShow({ id: news.id })" >
+        <p>{{news.title}}</p>
+      <img ng-src="{{ news.image }}">
+    </a>
+  </div>
 </div>
 
-<div class="parallax3"></div>
+<div class ="row" ng-controller="ReleasesIndexCtrl as releasesIndex">
+  <a ui-sref="releasesIndex"><h1>Releases</h1></a>
+  <div class="col-lg-5 col-md-5" ng-repeat="releases in releasesIndex.all">
+    <a ui-sref="releasesShow({ id: releases.id })" >
+      <p>{{releases.band}}</p>
+      <p>{{releases.album}}</p>
+      <img ng-src="{{ releases.image }}">
+    </a>
+  </div>
+</div>
 
-<div class="content3">
-<p>Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit dignissim. </p>
-</div> -->
+</div>

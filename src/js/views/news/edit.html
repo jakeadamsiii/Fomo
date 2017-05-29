@@ -5,7 +5,7 @@
 <h2>Edit</h2>
 <form name="edit.newsForm" ng-submit="edit.update()" >
   <div class="form-group">
-    <label for="name">NAME</label>
+    <label for="name">Title</label>
     <input type="text" name="name" id="name" ng-model="edit.news.title" class="form-control">
   </div>
   <div class="form-group">
@@ -13,7 +13,7 @@
     <input type="text" name="image" id="image" ng-model="edit.news.image" class="form-control">
   </div>
   <div class="form-group">
-    <p>DESCRIPTION</p>
+    <p>article</p>
     <textarea name="description" rows="8" cols="80" ng-model="edit.news.article"></textarea>
   </div>
   <button class="btn btn-primary">UPDATE</button>
