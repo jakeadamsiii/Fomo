@@ -18,6 +18,7 @@ body {
   font-weight: 300;
   color: grey;
   overflow-x: hidden;
+    text-align: center;
 }
 
 main {
@@ -225,9 +226,9 @@ form {
 .parallax{
   margin-top: -22px;
   opacity: 0.65;
-  height: 600px;
+  height: 90vh;
   width: 100%;
-  background-image: url("../images/index3.jpg");
+  background-image: url("../images/banner3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -237,7 +238,7 @@ form {
 .content{
   height:50%;
   background-color:white;
-  text-align: center;
+  border-top: 10px solid black;
   p{
     padding: 15px;
     font-size:20px;
@@ -248,58 +249,6 @@ form {
   }
 }
 
-.parallax2{
-  opacity: 0.65;
-  height: 700px;
-  width: 100%;
-  background-image: url("../images/index2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-}
-
-.content2{
-  color:white;
-  height:55%;
-  margin-top: -20px;
-  background-color:rgba(0,0,0,0.8);
-  text-align: left;
-  p{
-    padding: 15px;
-    font-size:20px;
-    font-family: 'Dosis', sans-serif;
-  }
-  h2{
-    padding-top: 20px;
-    padding-left: 30px;
-    font-family: 'Open Sans Condensed', sans-serif;
-  }
-}
-
-.parallax3{
-  opacity: 0.65;
-  height: 700px;
-  width: 100%;
-  background-image: url("../images/index.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-}
-
-.content3{
-  color:white;
-  height:40%;
-  margin-top: -20px;
-  background-color:rgba(0,0,0,1);
-  text-align: center;
-  p{
-    padding: 15px;
-    font-size:20px;
-    font-family: 'Dosis', sans-serif;
-  }
-}
 
 
 
@@ -391,7 +340,12 @@ div.footer{
 // landing styles
 
 #artist-landing{
+  border-top: 10px solid black;
   background: url("../images/background1.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
   a{
     height: 30px;
@@ -410,7 +364,7 @@ div.footer{
     align-self: center;
     text-transform: uppercase;
     span{
-      color: grey;
+      color: lightgrey;
     }
   }
   .artists{
@@ -420,6 +374,7 @@ div.footer{
       color: white;
       font-family: 'Roboto Slab', serif;
       font-size: 30px;
+      margin-bottom: 20px;
     }
     img{
         height: 60vh;
@@ -438,7 +393,7 @@ div.footer{
      left:0;
      right:0;
      bottom:0;
-     opacity: 1;
+
 }
 span.text-content span {
 
@@ -450,15 +405,114 @@ span.text-content span {
   display:flex;
   align-items: center;
   justify-content: center;
-  h3{
-  }
+  opacity: 0;
+  z-index: 100;
 }
   }
 }
 
-.artists:hover .artists span.text-content {
-  color:red;
+// span.text-content span:hover{
+//   opacity:1;
+//   transition: opacity .2s ease-out;
+//   -moz-transition: opacity .2s ease-out;
+//   -webkit-transition: opacity .2s ease-out;
+// }
+
+#news-landing{
+  border-top: 10px solid black;
+  background: url("../images/background2.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  a{
+    height: 30px;
+    padding-top: 50px;
+  }
+  h1{
+    font-size: 35px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color: black;
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    text-align: center;
+    align-self: center;
+    text-transform: uppercase;
+    span{
+      color: grey;
+    }
+  }
+  .news{
+    margin-top: -20px;
+    border-right: 1px solid black;
+    p{
+      color: black;
+      font-family: 'Roboto Slab', serif;
+      font-size: 20px;
+    }
+    img{
+        height: 40vh;
+        width: 40vh;
+        border: 2px solid black;
+        padding: 5px
+    }
+  }
 }
+
+#releases-landing{
+  border-top: 10px solid black;
+  background: url("../images/background3.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  a{
+    height: 30px;
+    padding-top: 50px;
+  }
+  h1{
+    font-size: 35px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color: black;
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    text-align: center;
+    align-self: center;
+    text-transform: uppercase;
+    span{
+      color: #cedbe6;
+    }
+  }
+  .releases{
+    margin-top: -20px;
+    p{
+      color: black;
+      font-family: 'Roboto Slab', serif;
+      font-size: 25px;
+
+    }
+    h3{
+      color:white;
+      font-family: 'Raleway', sans-serif;
+      font-size: 20px;
+      padding-bottom: 10px;
+    }
+    img{
+        height: 60vh;
+        width: 60vh;
+        border: 2px solid black;
+        padding: 5px
+    }
+  }
+}
+
+
 
 // animations
 
@@ -478,4 +532,35 @@ span.text-content span {
 .hvr-grow:focus,
 .hvr-grow:active {
     transform: scale(1.1);
+}
+
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #f3f3ef;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
 }
