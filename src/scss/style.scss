@@ -17,6 +17,7 @@ body {
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
   color: grey;
+  overflow-x: hidden;
 }
 
 main {
@@ -384,4 +385,97 @@ div.footer{
       }
     }
   }
+}
+
+
+// landing styles
+
+#artist-landing{
+  background: url("../images/background1.jpg");
+  height: 100vh;
+  a{
+    height: 30px;
+    padding-top: 50px;
+  }
+  h1{
+    font-size: 35px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color: white;
+    display: block;
+
+    margin: 0 auto;
+    width: 40%;
+    text-align: center;
+    align-self: center;
+    text-transform: uppercase;
+    span{
+      color: grey;
+    }
+  }
+  .artists{
+    margin-top: -20px;
+    border-right: 1px solid white;
+    p{
+      color: white;
+      font-family: 'Roboto Slab', serif;
+      font-size: 30px;
+    }
+    img{
+        height: 60vh;
+        width: 60vh;
+        border: 2px solid white;
+        padding: 5px
+    }
+    span.text-content {
+      color: white;
+      cursor: pointer;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+     top: -3vh;
+     left:0;
+     right:0;
+     bottom:0;
+     opacity: 1;
+}
+span.text-content span {
+
+  text-align: center;
+  vertical-align: middle;
+  background: rgba(0,0,0,0.5);
+  height: 58.5vh;
+  width: 59vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  h3{
+  }
+}
+  }
+}
+
+.artists:hover .artists span.text-content {
+  color:red;
+}
+
+// animations
+
+/* Grow */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
 }
