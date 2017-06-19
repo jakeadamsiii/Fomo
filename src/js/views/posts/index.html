@@ -9,9 +9,9 @@
 
 <div id="artist-landing" class ="row parallax2" ng-controller="ArtistsIndexCtrl as artistsIndex">
   <a class='col-lg-12' ui-sref="artistsIndex"><h1 class='hvr-grow'>Artists<span> / view all</span></h1></a>
-  <div class="col-lg-6 col-md-6 artists" ng-repeat="artists in artistsIndex.all">
+  <div class="col-lg-6 col-md-6 artists" ng-repeat="artists in artistsIndex.all | limitTo:-2">
       <a ui-sref="artistsShow({ id: artists.id })" >
-        <p class="hvr-underline-from-center">{{artists.name}}</p>
+        <p class="hvr-underline-from-center">{{artists.name}}</p><br/>
         <img ng-src="{{ artists.image }}">
         <!-- <span class="text-content"><span><h3>{{ artists.description }}</h3></span></span> -->
       </a>
@@ -20,9 +20,9 @@
 
 <div id="news-landing" class ="row" ng-controller="NewsIndexCtrl as newsIndex">
   <a class='col-lg-12' ui-sref="newsIndex"><h1 class='hvr-grow'>News<span> / view all</span></h1></a>
-  <div class="col-lg-3 col-md-3 news" ng-repeat="news in newsIndex.all">
+  <div class="col-lg-3 col-md-3 news" ng-repeat="news in newsIndex.all | limitTo:-4">
     <a ui-sref="newsShow({ id: news.id })" >
-        <p>{{news.title}}</p>
+        <p id='pad-this'>{{news.title}}</p>
       <img ng-src="{{ news.image }}">
     </a>
   </div>
@@ -30,7 +30,7 @@
 
 <div id="releases-landing"  class ="row" ng-controller="ReleasesIndexCtrl as releasesIndex">
   <a class='col-lg-12' ui-sref="releasesIndex"><h1 class='hvr-grow'>Releases<span> / view all</span></h1></a>
-  <div class="col-lg-6 col-md-6 releases" ng-repeat="releases in releasesIndex.all">
+  <div class="col-lg-6 col-md-6 releases" ng-repeat="releases in releasesIndex.all | limitTo:-2">
     <a ui-sref="releasesShow({ id: releases.id })" >
       <p>{{releases.band}}</p>
       <h3>{{releases.album}}</h3>

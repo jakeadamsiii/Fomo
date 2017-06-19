@@ -61,6 +61,11 @@ strong {
 
 nav{
     z-index: 10;
+
+}
+
+body{
+    background: $fomoblue;
 }
 
 header {
@@ -69,14 +74,19 @@ header {
   height: 100px;
   margin-bottom: 20px;
   border-bottom: 1px solid white;
+  transform: skewY(4deg);
+  transform-origin: top left;
+  z-index: 10;
+  position: relative;
   ul {
     li {
+      transform: skewX(10deg);
       display: inline-block;
-      margin-top: 40px;
+      margin-top: 20px;
       margin-left: 30px;
       text-transform: uppercase;
       letter-spacing: 2px;
-      font-size: 18px;
+      font-size: 24px;
       &.logo {
         font-weight: 600;
         font-size: 16px;
@@ -222,6 +232,14 @@ form {
 }
 
 //====Landing page styles =======
+#pad-this{
+  margin-top: -60px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
 
 .parallax{
   margin-top: -22px;
@@ -246,10 +264,9 @@ form {
   }
   h2{
     font-family: 'Open Sans Condensed', sans-serif;
+    margin-top: 20px;
   }
 }
-
-
 
 
 //footer
@@ -300,8 +317,10 @@ div.footer{
     }
   }
   header {
+        transform: skewY(0deg);
     ul {
       li {
+        transform: skewX(0deg);
         color: white;
         margin: 0;
         &.burger {
@@ -395,28 +414,10 @@ div.footer{
      bottom:0;
 
 }
-span.text-content span {
 
-  text-align: center;
-  vertical-align: middle;
-  background: rgba(0,0,0,0.5);
-  height: 58.5vh;
-  width: 59vh;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  z-index: 100;
-}
   }
 }
 
-// span.text-content span:hover{
-//   opacity:1;
-//   transition: opacity .2s ease-out;
-//   -moz-transition: opacity .2s ease-out;
-//   -webkit-transition: opacity .2s ease-out;
-// }
 
 #news-landing{
   border-top: 10px solid black;
